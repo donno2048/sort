@@ -1,4 +1,6 @@
-# Usage
+# Superfast sorting algorithm
+
+## Usage
 
 ```sh
 gcc main.c sort.c -o main
