@@ -1,5 +1,12 @@
 # Superfast sorting algorithm
 
+## Clone
+
+```sh
+git clone https://github.com/donno2048/sort
+cd sort
+```
+
 ## Usage
 
 ```sh
