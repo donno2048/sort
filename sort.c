@@ -1,8 +1,8 @@
-#define iSwap(X, Y) {\
+#define Iswap(X, Y) {\
               X ^= Y;\
               Y ^= X;\
               X ^= Y;}
-#define fSwap(X, Y) {\
+#define Fswap(X, Y) {\
               X += Y;\
            Y = X - Y;\
               X -= Y;}
@@ -17,7 +17,7 @@ void Fsort(float list[], int size) {
     while ((size - 1) >> ++gap);
     gap = power(2, gap) - size;
     // creating list with this gap
-    float List[gap + size], min = list[0]; /// diff #1
+    float List[gap + size], min = list[0]; // diff #1
     for (i = 1; i < size; i++) if (list[i] < min) min = list[i];
     for (i = 0; i < gap; i++) List[i] = min;
     size += gap;
@@ -28,7 +28,7 @@ void Fsort(float list[], int size) {
         while (j) {
             for (i = 0; i < size; i++) {
                 x = i ^ j;
-                if ((x > i) && ((!(i & k) && (List[i] > List[x])) || ((i & k) && (List[i] < List[x])))) fSwap(List[i], List[x]) /// diff #2
+                if ((x > i) && ((!(i & k) && (List[i] > List[x])) || ((i & k) && (List[i] < List[x])))) Fswap(List[i], List[x]); // diff #2
             }
             j /= 2;
         }
@@ -43,7 +43,7 @@ void Isort(int list[], int size) {
     while ((size - 1) >> ++gap);
     gap = power(2, gap) - size;
     // creating list with this gap
-    int List[gap + size], min = list[0]; /// diff #1
+    int List[gap + size], min = list[0]; // diff #1
     for (i = 1; i < size; i++) if (list[i] < min) min = list[i];
     for (i = 0; i < gap; i++) List[i] = min;
     size += gap;
@@ -54,7 +54,7 @@ void Isort(int list[], int size) {
         while (j) {
             for (i = 0; i < size; i++) {
                 x = i ^ j;
-                if ((x > i) && ((!(i & k) && (List[i] > List[x])) || ((i & k) && (List[i] < List[x])))) iSwap(List[i], List[x]) /// diff #2
+                if ((x > i) && ((!(i & k) && (List[i] > List[x])) || ((i & k) && (List[i] < List[x])))) Iswap(List[i], List[x]); // diff #2
             }
             j /= 2;
         }
